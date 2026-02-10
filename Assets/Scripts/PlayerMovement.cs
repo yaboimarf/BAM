@@ -10,19 +10,27 @@ public class PlayerMovement : MonoBehaviour
     public Transform cam;
     public Rigidbody rb;
     public float jumpStrength;
+    public float gravity;
+
+    public float groundDistance;
+    public RaycastHit groundedHit;
     // Update is called once per frame
     void Update()
     {
         BodyMovement();
         CamMovement();
         Jump();
+        
     }
     private void BodyMovement()
     {
         moveDir.x = Input.GetAxis("Horizontal");
         moveDir.z = Input.GetAxis("Vertical");
 
-        rb.AddRelativeForce(moveSpeed * Time.deltaTime * moveDir, ForceMode.Impulse);
+        if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
+        {
+            rb.AddRelativeForce(moveSpeed * Time.deltaTime * moveDir, ForceMode.Impulse);
+        }
         //transform.Translate(moveDir * Time.deltaTime * moveSpeed);
     }
     private void CamMovement()
@@ -35,9 +43,17 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
         {
-            rb.AddForce(Vector3.up * Time.deltaTime * jumpStrength, ForceMode.Impulse);
+            rb.linearDamping = 10f;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+            }
+        }
+        else
+        {
+            rb.linearDamping = 0.05f;
         }
     }
 }
