@@ -626,6 +626,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc25a2e5314072f49b47d84c34731bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDir: {x: 0, y: 0, z: 0}
+  moveSpeed: 100
+  bodyRotate: {x: 0, y: 0, z: 0}
+  camRotate: {x: 0, y: 0, z: 0}
+  rotateSpeed: 360
+  cam: {fileID: 1285461941}
+  rb: {fileID: 1435791402}
+  jumpStrength: 10
 --- !u!54 &1435791402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -635,7 +643,7 @@ Rigidbody:
   m_GameObject: {fileID: 1435791400}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -738,7 +746,7 @@ Transform:
   m_GameObject: {fileID: 1435791400}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.567733, y: 3.0728807, z: -7.1390953}
+  m_LocalPosition: {x: -5.567733, y: 6.19, z: -7.1390953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
