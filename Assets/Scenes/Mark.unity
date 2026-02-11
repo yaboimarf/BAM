@@ -735,7 +735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDir: {x: 0, y: 0, z: 0}
-  moveSpeed: 500
+  moveSpeed: 100
+  notGroundedPenalty: 0.1
+  boostSpeed: 20
   bodyRotate: {x: 0, y: 0, z: 0}
   camRotate: {x: 0, y: 0, z: 0}
   rotateSpeed: 360
@@ -744,6 +746,9 @@ MonoBehaviour:
   jumpStrength: 10
   gravity: 10
   groundDistance: 1.1
+  grounded: 0
+  doubleJumps: 1
+  dashes: 2
 --- !u!54 &1435791402
 Rigidbody:
   m_ObjectHideFlags: 0

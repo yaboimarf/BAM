@@ -4,6 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Vector3 moveDir;
     public float moveSpeed;
+    public float notGroundedPenalty;
+    public float boostSpeed;
     public Vector3 bodyRotate;
     public Vector3 camRotate;
     public float rotateSpeed;
@@ -14,24 +16,65 @@ public class PlayerMovement : MonoBehaviour
 
     public float groundDistance;
     public RaycastHit groundedHit;
+    public bool grounded;
+    private int doubleJumpsRemaining;
+    public int doubleJumps;
+    private int dashesRemaining;
+    public int dashes;
     // Update is called once per frame
     void Update()
     {
         BodyMovement();
         CamMovement();
         Jump();
-        
+        if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
+        {
+            grounded = true;
+            doubleJumpsRemaining = doubleJumps;
+            dashesRemaining = dashes;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
     private void BodyMovement()
     {
         moveDir.x = Input.GetAxis("Horizontal");
         moveDir.z = Input.GetAxis("Vertical");
 
-        if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
+        if (grounded == true)
         {
-            rb.AddRelativeForce(moveSpeed * Time.deltaTime * moveDir, ForceMode.Impulse);
+            rb.AddRelativeForce(moveSpeed * Time.deltaTime * moveDir, ForceMode.Impulse);            
         }
-        //transform.Translate(moveDir * Time.deltaTime * moveSpeed);
+        else
+        {
+            rb.AddRelativeForce(moveSpeed * notGroundedPenalty * Time.deltaTime * moveDir, ForceMode.Impulse);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if(dashesRemaining > 0)
+            {
+                if (grounded == true)
+                {
+                    rb.AddForce(transform.forward * boostSpeed * 5, ForceMode.Impulse);
+                }
+                else
+                {
+                    rb.AddForce(transform.forward * boostSpeed, ForceMode.Impulse);
+                }
+                dashesRemaining -= 1;
+            }
+            //if (grounded == true)
+            //{
+            //    rb.AddForce(transform.forward * boostSpeed * 5, ForceMode.Impulse);
+            //}
+            //else
+            //{
+            //    rb.AddForce(transform.forward * boostSpeed, ForceMode.Impulse);
+            //}
+        }
     }
     private void CamMovement()
     {
@@ -43,13 +86,18 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.linearDamping = 10f;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (doubleJumpsRemaining > 0)
             {
                 rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+                doubleJumpsRemaining -= 1;
             }
+        }
+
+        if (grounded == true)
+        {
+            rb.linearDamping = 10f;            
         }
         else
         {
