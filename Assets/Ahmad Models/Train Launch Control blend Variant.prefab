@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9033203712039617827
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.251458
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.223425
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 439329642784874045, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 960145604549117063, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: m_Name
+      value: Train Launch Control blend Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727136214168668058, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6325c1f6c4dbed1429bb560b71338291, type: 2}
+    - target: {fileID: 2727136214168668058, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77aa4653f229e9540ab3a3127f1efebc, type: 2}
+    - target: {fileID: 6354531109336431322, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77aa4653f229e9540ab3a3127f1efebc, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 370219834375204439, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+    - {fileID: 7680759333123512605, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02e51890b8570394ba0e3f9152865408, type: 3}
