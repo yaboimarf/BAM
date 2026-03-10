@@ -20,11 +20,6 @@ public class SciFiButtonEffects : MonoBehaviour, IPointerEnterHandler, IPointerE
     public float slideDistance = 15f;
     public float slideSpeed = 8f;
 
-    [Header("Audio")]
-    public AudioSource audioSource;
-    public AudioClip hoverSound;
-    public AudioClip clickSound;
-
     private bool hovering = false;
 
     void Start()
@@ -57,8 +52,8 @@ public class SciFiButtonEffects : MonoBehaviour, IPointerEnterHandler, IPointerE
         hovering = true;
         img.color = hoverColor;
 
-        if (audioSource && hoverSound)
-            audioSource.PlayOneShot(hoverSound);
+        // Geluid gaat nu via SoundManager
+        SoundManager.instance.PlayHover();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -69,7 +64,7 @@ public class SciFiButtonEffects : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (audioSource && clickSound)
-            audioSource.PlayOneShot(clickSound);
+        // Geluid gaat nu via SoundManager
+        SoundManager.instance.PlayClick();
     }
 }
