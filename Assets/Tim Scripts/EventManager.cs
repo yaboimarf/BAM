@@ -9,7 +9,7 @@ public class EventManager : MonoBehaviour
     public float timeBetweenEvents = 10f;
 
     [Header("Max timer limiet")]
-    public float maxTimerTime = 25f; // hoger dan dit kan timer nooit worden
+    public float maxTimerTime = 25f;
 
     [Header("Timer UI")]
     public TextMeshProUGUI timerText;
@@ -20,9 +20,9 @@ public class EventManager : MonoBehaviour
     [Header("Error instellingen")]
     [Range(0f, 1f)]
     public float errorChancePerSecond = 0.05f;
+
     public float minTimeBeforeError = 2f;
 
-    private bool eventRunning = false;
     private float timer;
     private bool errorActive = false;
     private float timeSinceReset = 0f;
@@ -34,12 +34,11 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
-        if (eventRunning) return;
-
+        // timer loopt ALTIJD
         timer -= Time.deltaTime;
         timeSinceReset += Time.deltaTime;
 
-        // random error check
+        // random error
         if (!errorActive && timeSinceReset > minTimeBeforeError)
         {
             if (Random.value < errorChancePerSecond * Time.deltaTime)
@@ -50,9 +49,8 @@ public class EventManager : MonoBehaviour
 
         if (timer <= 0f)
         {
-            StartCoroutine(RunRandomEvent());
+            StartRandomEvent();
             ResetTimer();
-            return;
         }
 
         UpdateTimerUI();
@@ -78,33 +76,27 @@ public class EventManager : MonoBehaviour
     {
         errorActive = true;
 
-        // laat error tekst zien
         yield return new WaitForSeconds(2f);
 
         int extraTime = Random.value < 0.5f ? 5 : 10;
 
-        // voeg tijd toe maar met MAX LIMIET
         timer += extraTime;
         timer = Mathf.Min(timer, maxTimerTime);
 
         errorActive = false;
     }
 
-    IEnumerator RunRandomEvent()
+    void StartRandomEvent()
     {
-        if (events.Count == 0) yield break;
-
-        eventRunning = true;
+        if (events.Count == 0) return;
 
         GameEvent chosenEvent = GetRandomEvent();
 
         if (chosenEvent != null)
         {
             Debug.Log("Event gestart: " + chosenEvent.eventName);
-            yield return StartCoroutine(chosenEvent.PlayEvent());
+            StartCoroutine(chosenEvent.PlayEvent());
         }
-
-        eventRunning = false;
     }
 
     GameEvent GetRandomEvent()
@@ -120,6 +112,7 @@ public class EventManager : MonoBehaviour
         foreach (GameEvent e in events)
         {
             current += e.eventWeight;
+
             if (randomValue <= current)
                 return e;
         }
