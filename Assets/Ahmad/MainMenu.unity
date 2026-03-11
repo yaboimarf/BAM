@@ -5170,7 +5170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 555992906}
   - component: {fileID: 555992908}
-  - component: {fileID: 555992907}
+  - component: {fileID: 555992909}
   m_Layer: 0
   m_Name: Sound Manger
   m_TagString: Untagged
@@ -5187,13 +5187,28 @@ Transform:
   m_GameObject: {fileID: 555992905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 59, y: -15.456238, z: -4.6143}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 364, y: 539, z: -4.6143}
+  m_LocalScale: {x: 1.3122, y: 1.3122, z: 1.3122}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1430778728}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &555992907
+--- !u!114 &555992908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555992905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7648c485e09cf37489fdc17e1fc558a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxSource: {fileID: 555992909}
+  hoverSound: {fileID: 8300000, guid: 07671fe7d1d665b40af56b0a5ac5d65a, type: 3}
+  clickSound: {fileID: 8300000, guid: 2fb85d7b081005a41b5a7801ea652825, type: 3}
+--- !u!82 &555992909
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5214,8 +5229,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 427.58093
+  MaxDistance: 427.58093
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -5290,22 +5305,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &555992908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555992905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7648c485e09cf37489fdc17e1fc558a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 555992907}
-  sfxSource: {fileID: 0}
-  hoverSound: {fileID: 8300000, guid: 2fb85d7b081005a41b5a7801ea652825, type: 3}
-  clickSound: {fileID: 8300000, guid: c68d9e55912c77e4194ff202f6ef98d8, type: 3}
 --- !u!1 &770129076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,7 +5661,6 @@ RectTransform:
   - {fileID: 770129077}
   - {fileID: 2024873486}
   - {fileID: 1697610889}
-  - {fileID: 555992906}
   m_Father: {fileID: 199063824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6242,5 +6240,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 321680662}
   - {fileID: 1729476251}
+  - {fileID: 555992906}
   - {fileID: 199063824}
   - {fileID: 2078919441}
