@@ -17,10 +17,16 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance;
     public RaycastHit groundedHit;
     public bool grounded;
+
+    public float wallDistance;
+    public RaycastHit walledHit;
+    public bool walled;
+
     private int doubleJumpsRemaining;
     public int doubleJumps;
     private int dashesRemaining;
     public int dashes;
+
     // Update is called once per frame
     void Update()
     {

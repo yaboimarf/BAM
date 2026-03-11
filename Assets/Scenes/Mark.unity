@@ -1503,6 +1503,8 @@ MonoBehaviour:
   gravity: 10
   groundDistance: 1.1
   grounded: 0
+  wallDistance: 0.6
+  walled: 0
   doubleJumps: 1
   dashes: 2
 --- !u!54 &1435791402
