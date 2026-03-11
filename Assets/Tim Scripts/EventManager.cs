@@ -95,6 +95,7 @@ public class EventManager : MonoBehaviour
         if (chosenEvent != null)
         {
             Debug.Log("Event gestart: " + chosenEvent.eventName);
+            EventAnnouncement.instance.AnnounceEvent(chosenEvent.eventName);
             StartCoroutine(chosenEvent.PlayEvent());
         }
     }
