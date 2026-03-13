@@ -96,6 +96,7 @@ public class EventManager : MonoBehaviour
         {
             Debug.Log("Event gestart: " + chosenEvent.eventName);
             EventAnnouncement.instance.AnnounceEvent(chosenEvent.eventName);
+            Bomb.currentEventCount++;
             StartCoroutine(chosenEvent.PlayEvent());
         }
     }
