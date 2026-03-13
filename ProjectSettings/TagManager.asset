@@ -6,6 +6,8 @@ TagManager:
   tags:
   - UI
   - Platform
+  - Checkpoint
+  - KillZone
   layers:
   - Default
   - TransparentFX
