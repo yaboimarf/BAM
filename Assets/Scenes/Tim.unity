@@ -308,6 +308,7 @@ MonoBehaviour:
   - {fileID: 1222696620}
   - {fileID: 1802742298}
   - {fileID: 874480004}
+  - {fileID: 1536106588}
   errorChancePerSecond: 0
   minTimeBeforeError: 3
 --- !u!4 &156585980
@@ -2124,6 +2125,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1536106587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536106589}
+  - component: {fileID: 1536106588}
+  m_Layer: 0
+  m_Name: InvertedMapEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1536106588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536106587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104dace6a45f2d4408ff80d84c593c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: Inverted Camera
+  eventWeight: 1
+  playerCamera: {fileID: 682029959}
+  eventDuration: 9
+  rotateSpeed: 2
+--- !u!4 &1536106589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536106587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6050284, y: -62.78661, z: 119.12706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1609117692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,6 +3025,7 @@ SceneRoots:
   - {fileID: 1222696621}
   - {fileID: 874480005}
   - {fileID: 1802742299}
+  - {fileID: 1536106589}
   - {fileID: 444115993}
   - {fileID: 1346123201}
   - {fileID: 400148352}
