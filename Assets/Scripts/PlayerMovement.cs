@@ -27,25 +27,34 @@ public class PlayerMovement : MonoBehaviour
     private int dashesRemaining;
     public int dashes;
 
+    //public int batteryRemaining;
+    //public int dashCost;
+    //public int jumpCost;
+
+    public float maxDampening;
+    public float minDampening;
+
     // Update is called once per frame
     void Update()
     {
         BodyMovement();
-        CamMovement();
         Jump();
-        if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
-        {
-            grounded = true;
-            doubleJumpsRemaining = doubleJumps;
-            dashesRemaining = dashes;
-        }
-        else
-        {
-            grounded = false;
-        }
+        WallCling();
+
+        //if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
+        //{
+        //    grounded = true;
+        //    doubleJumpsRemaining = doubleJumps;
+        //    dashesRemaining = dashes;
+        //}
+        //else
+        //{
+        //    grounded = false;
+        //}
     }
     private void BodyMovement()
     {
+        //body movement
         moveDir.x = Input.GetAxis("Horizontal");
         moveDir.z = Input.GetAxis("Vertical");
 
@@ -58,6 +67,14 @@ public class PlayerMovement : MonoBehaviour
             rb.AddRelativeForce(moveSpeed * notGroundedPenalty * Time.deltaTime * moveDir, ForceMode.Impulse);
         }
 
+        // cam movement
+        bodyRotate.y = Input.GetAxis("Mouse X");
+        camRotate.x = -Input.GetAxis("Mouse Y");
+
+        transform.Rotate(bodyRotate * Time.deltaTime * rotateSpeed);
+        cam.Rotate(camRotate * Time.deltaTime * rotateSpeed);
+
+        // dashes
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if(dashesRemaining > 0)
@@ -72,23 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 dashesRemaining -= 1;
             }
-            //if (grounded == true)
-            //{
-            //    rb.AddForce(transform.forward * boostSpeed * 5, ForceMode.Impulse);
-            //}
-            //else
-            //{
-            //    rb.AddForce(transform.forward * boostSpeed, ForceMode.Impulse);
-            //}
         }
-    }
-    private void CamMovement()
-    {
-        bodyRotate.y = Input.GetAxis("Mouse X");
-        camRotate.x = -Input.GetAxis("Mouse Y");
-
-        transform.Rotate(bodyRotate * Time.deltaTime * rotateSpeed);
-        cam.Rotate(camRotate * Time.deltaTime * rotateSpeed);
     }
     private void Jump()
     {
@@ -101,13 +102,58 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // checks for sky vs ground linear dampening
         if (grounded == true)
         {
-            rb.linearDamping = 10f;            
+            rb.linearDamping = maxDampening;            
         }
         else
         {
-            rb.linearDamping = 0.05f;
+            rb.linearDamping = minDampening;
+        }
+
+        // checks if player is allowed to jump
+        if (Physics.Raycast(transform.position, -transform.up, out groundedHit, groundDistance))
+        {
+            grounded = true;
+            doubleJumpsRemaining = doubleJumps;
+            dashesRemaining = dashes;
+        }
+        else
+        {
+            grounded = false;
+        }
+    }
+    private void WallCling()
+    {
+        if (grounded == false)
+        {
+            if (Physics.Raycast(transform.position, transform.right, out walledHit, wallDistance))
+            {
+                rb.useGravity = false;
+                rb.AddForce(1 * Time.deltaTime * transform.right, ForceMode.Impulse);
+                rb.AddRelativeForce(2 * Time.deltaTime * -transform.up, ForceMode.Impulse);
+                rb.AddForce(10 * Time.deltaTime * transform.forward, ForceMode.Impulse);
+                walled = true;
+                Debug.Log("ik werk");
+            }
+
+            if (Physics.Raycast(transform.position, -transform.right, out walledHit, wallDistance))
+            {
+                rb.useGravity = false;
+                rb.AddForce(1 * Time.deltaTime * -transform.right, ForceMode.Impulse);
+                rb.AddRelativeForce(2 * Time.deltaTime * -transform.up, ForceMode.Impulse);
+                rb.AddForce(10 * Time.deltaTime * transform.forward, ForceMode.Impulse);
+                walled = true;
+            }
+
+            if (!Physics.Raycast(transform.position, -transform.right, out walledHit, wallDistance))
+            {
+                if (!Physics.Raycast(transform.position, transform.right, out walledHit, wallDistance))
+                {
+                    rb.useGravity = true;
+                }
+            }
         }
     }
 }
