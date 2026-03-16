@@ -3832,6 +3832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 2240600919701902612, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2847187069073346241, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.567733
@@ -3872,11 +3876,74 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8025437319413527767, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 52498975335892213, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6303055537229487533}
   m_SourcePrefab: {fileID: 100100000, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+--- !u!1 &6303055537229487530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 52498975335892213, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+  m_PrefabInstance: {fileID: 6303055537229487529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6303055537229487531 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6442006460062971273, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+  m_PrefabInstance: {fileID: 6303055537229487529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &6303055537229487532 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8519498718390534364, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+  m_PrefabInstance: {fileID: 6303055537229487529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6303055537229487533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303055537229487530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bd56dd2747d634e83354eb547287c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDir: {x: 0, y: 0, z: 0}
+  moveSpeed: 100
+  notGroundedPenalty: 0.1
+  boostSpeed: 20
+  bodyRotate: {x: 0, y: 0, z: 0}
+  camRotate: {x: 0, y: 0, z: 0}
+  rotateSpeed: 360
+  cam: {fileID: 6303055537229487531}
+  rb: {fileID: 6303055537229487532}
+  jumpStrength: 7.5
+  gravity: 10
+  groundDistance: 1.1
+  grounded: 0
+  wallDistance: 0.6
+  walled: 0
+  doubleJumps: 0
+  dashes: 0
+  batteryRemaining: 0
+  batteryMax: 100
+  batteryMin: 9
+  chargeRate: 10
+  dashCost: 20
+  jumpCost: 10
+  maxDampening: 10
+  minDampening: 0.05
+  minClamp: -89
+  maxClamp: 89
+  valueX: 0
+  valueX2: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
