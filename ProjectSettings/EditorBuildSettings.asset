@@ -5,20 +5,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Ahmad/MainMenu.unity
-    guid: 3186d2f5093cfce48a9207a4cf8eb27b
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Ahmad/Settings.unity
-    guid: 28c8118ecce6a644e8bf6a77698cc6ea
-  - enabled: 0
-    path: Assets/Ahmad/Options.unity
-    guid: bcb194c88a841a74c91b436d6db8e300
   - enabled: 1
-    path: Assets/Scenes/map.unity
+    path: Assets/Scenes/Main Game Scene.unity
     guid: d442206056b329b4598637aba12140f0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
