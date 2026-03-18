@@ -1,46 +1,28 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Main Game Scene");  // Vervang met de naam van je game scene
-    }
+    public GameObject settingsCanvas;
+    private bool isOpen = false;
 
-    public void ReturnMainMenu()
+    void Start()
     {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public void Settings()
-    {
-        SceneManager.LoadScene("Settings");  // naam van je settings scene
-    }
-
-    public void Exit()
-    {
-        Debug.Log("Game Closed");
-        Application.Quit();  // Werkt alleen in build, niet in Unity Editor
+        settingsCanvas.SetActive(false); // menu start uit
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            string currentScene = SceneManager.GetActiveScene().name;
-
-            if (currentScene == "Game")
+            if (isOpen)
             {
-                SceneManager.LoadScene("Options");
+                settingsCanvas.SetActive(false);
+                isOpen = false;
             }
-            else if (currentScene == "Settings")
+            else
             {
-                SceneManager.LoadScene("MainMenu");
-            }
-            else if (currentScene == "Options")
-            {
-                SceneManager.LoadScene("Game");
+                settingsCanvas.SetActive(true);
+                isOpen = true;
             }
         }
     }

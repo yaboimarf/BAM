@@ -16,6 +16,9 @@ public class SoundScript : MonoBehaviour
             PlayerPrefs.SetFloat("soundVolume", 1);
             LoadVolume();
         }
+
+        // BELANGRIJK: volume opslaan zodra slider beweegt
+        VolumeSlider.onValueChanged.AddListener(delegate { SetVolume(); });
     }
 
     public void SetVolume()
