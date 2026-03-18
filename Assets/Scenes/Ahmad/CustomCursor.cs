@@ -5,10 +5,7 @@ public class CustomCursor : MonoBehaviour
     public Texture2D cursorTexture;
     public Vector2 hotspot = Vector2.zero;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+  
 
     void Start()
     {
