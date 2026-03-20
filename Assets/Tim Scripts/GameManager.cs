@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject loseScreen;
+    public GameObject WinScreen;
     public GameObject timerCanvas;
     public GameObject eventAnnouncement;
     public GameObject player;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
         mainMenu.SetActive(true);
         loseScreen.SetActive(false);
+        WinScreen.SetActive(false);
         timerCanvas.SetActive(false);
         eventAnnouncement.SetActive(false);
 

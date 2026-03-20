@@ -47,7 +47,7 @@ Material:
     - _QueueOffset: 0
     - _RadiaDistortion: 3.5
     - _RadialScale: 11.65
-    - _Speed: 0.2
+    - _Speed: 0.245
     - _TwirlDistortion: 3
     - _TwirlScale: 2
     - _TwirlStrength: 18
