@@ -18,11 +18,21 @@ public class PauseMenu : MonoBehaviour
             {
                 settingsCanvas.SetActive(false);
                 isOpen = false;
+
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+                Time.timeScale = 1f;
             }
             else
             {
                 settingsCanvas.SetActive(true);
                 isOpen = true;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+                Time.timeScale = 0f;
             }
         }
     }
