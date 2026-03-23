@@ -3,46 +3,35 @@ using UnityEngine;
 
 public class InvertControlsEvent : GameEvent
 {
-    [Header("Player reference")]
-    public Rigidbody playerRb;
+    private PlayerMovement2 playerMovement;
 
     [Header("Settings")]
     public float invertDuration = 5f;
-    public float invertForce = 30f;
-
-    private bool active = false;
 
     public override IEnumerator PlayEvent()
     {
-        active = true;
+        // player vinden via tag
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
+        {
+            playerMovement = player.GetComponent<PlayerMovement2>();
+        }
+
+        if (playerMovement == null)
+        {
+            Debug.LogError("PlayerMovement2 niet gevonden!");
+            yield break;
+        }
 
         Debug.Log("Inverted Controls gestart!");
 
-        float timer = 0f;
+        playerMovement.invertMultiplier = -1f;
 
-        while (timer < invertDuration)
-        {
-            timer += Time.deltaTime;
+        yield return new WaitForSeconds(invertDuration);
 
-            ApplyInvertedMovement();
-
-            yield return null;
-        }
-
-        active = false;
+        playerMovement.invertMultiplier = 1f;
 
         Debug.Log("Inverted Controls voorbij");
-    }
-
-    void ApplyInvertedMovement()
-    {
-        if (!active) return;
-
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        Vector3 invertedMove = new Vector3(-horizontal, 0, -vertical);
-
-        playerRb.AddRelativeForce(invertedMove * invertForce * Time.deltaTime, ForceMode.Impulse);
     }
 }

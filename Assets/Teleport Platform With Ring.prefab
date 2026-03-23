@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport Platform With Ring
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c124c113b025a34199cece5554f314d, type: 3}
+      propertyPath: m_TagString
+      value: Checkpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 8416272007918961125, guid: 3c124c113b025a34199cece5554f314d, type: 3}
       propertyPath: m_Name
       value: Button Frame 2

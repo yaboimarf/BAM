@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpStrength;
     public float gravity;
 
+    public float invertMultiplier = 1f;
+
     public float groundDistance;
     public RaycastHit groundedHit;
     public bool grounded;
@@ -55,8 +57,8 @@ public class PlayerMovement : MonoBehaviour
     private void BodyMovement()
     {
         //body movement
-        moveDir.x = Input.GetAxis("Horizontal");
-        moveDir.z = Input.GetAxis("Vertical");
+        moveDir.x = Input.GetAxis("Horizontal") * invertMultiplier;
+        moveDir.z = Input.GetAxis("Vertical") * invertMultiplier;
 
         if (grounded == true)
         {

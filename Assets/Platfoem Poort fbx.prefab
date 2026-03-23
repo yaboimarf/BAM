@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platfoem Poort fbx
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2efcdc06d9db3a64d8de2c2dd6311cd8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2efcdc06d9db3a64d8de2c2dd6311cd8, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     - target: {fileID: 4114828618339340689, guid: 2efcdc06d9db3a64d8de2c2dd6311cd8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.472

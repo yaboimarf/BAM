@@ -17,6 +17,8 @@ public class PlayerMovement2 : MonoBehaviour
     public float maxDampening;
     public float minDampening;
 
+    public float invertMultiplier = 1f;
+
     [Header("Cam movement")]
     public Vector3 bodyRotate;
     public Vector3 camRotate;
@@ -89,8 +91,8 @@ public class PlayerMovement2 : MonoBehaviour
     private void BodyMovement()
     {
         // body movement
-        moveDir.x = Input.GetAxis("Horizontal");
-        moveDir.z = Input.GetAxis("Vertical");
+        moveDir.x = Input.GetAxis("Horizontal") * invertMultiplier;
+        moveDir.z = Input.GetAxis("Vertical") * invertMultiplier;
 
         if (grounded == true)
         {
