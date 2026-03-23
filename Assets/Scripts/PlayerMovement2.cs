@@ -130,11 +130,11 @@ public class PlayerMovement2 : MonoBehaviour
             {
                 if (grounded == true)
                 {
-                    rb.AddForce(transform.forward * boostSpeed * 5, ForceMode.Impulse);
+                    rb.AddForce(transform.forward * boostSpeed, ForceMode.Impulse);
                 }
                 else
                 {
-                    rb.AddForce(transform.forward * boostSpeed, ForceMode.Impulse);
+                    rb.AddForce(transform.forward * boostSpeed * notGroundedPenalty, ForceMode.Impulse);
                 }
                 batteryRemaining -= dashCost;
             }
