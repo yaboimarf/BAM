@@ -10,23 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7c1554689fe7c8645a3e5b7f0f60c7ba, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.46637353
+      value: 1.6832354
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c1554689fe7c8645a3e5b7f0f60c7ba, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.46637353
+      value: 1.6832354
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c1554689fe7c8645a3e5b7f0f60c7ba, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.46637353
+      value: 1.6832354
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c1554689fe7c8645a3e5b7f0f60c7ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.46
+      value: -16.489
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c1554689fe7c8645a3e5b7f0f60c7ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.25
+      value: 8.4844
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c1554689fe7c8645a3e5b7f0f60c7ba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -129,7 +129,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
