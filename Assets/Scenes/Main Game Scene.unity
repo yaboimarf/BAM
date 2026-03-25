@@ -652,6 +652,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 720843519057018572, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+      propertyPath: boostSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 720843519057018572, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
       propertyPath: loseScreen
       value: 
       objectReference: {fileID: 9220619420843615255}
