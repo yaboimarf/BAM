@@ -4,6 +4,9 @@ public class PlayerCheckpoint : MonoBehaviour
 {
     public Transform currentCheckpoint;
 
+    [Header("Respawn Settings")]
+    public float respawnOffsetY = 1.5f;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Checkpoint"))
@@ -17,7 +20,8 @@ public class PlayerCheckpoint : MonoBehaviour
     {
         if (currentCheckpoint != null)
         {
-            transform.position = currentCheckpoint.position;
+            Vector3 respawnPos = currentCheckpoint.position + Vector3.up * respawnOffsetY;
+            transform.position = respawnPos;
         }
     }
 }
