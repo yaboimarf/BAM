@@ -4,11 +4,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Canvassen")]
     public GameObject mainMenu;
     public GameObject loseScreen;
-    public GameObject WinScreen;          // al aanwezig
+    public GameObject WinScreen;
     public GameObject timerCanvas;
     public GameObject eventAnnouncement;
+
+    [Header("Player")]
     public GameObject player;
     public Rigidbody playerRb;
     PlayerCheckpoint checkpoint;
@@ -22,9 +25,10 @@ public class GameManager : MonoBehaviour
     {
         checkpoint = player.GetComponent<PlayerCheckpoint>();
 
+        // Begin toestand
         mainMenu.SetActive(true);
         loseScreen.SetActive(false);
-        WinScreen.SetActive(false);        // blijft hetzelfde
+        WinScreen.SetActive(false);
         timerCanvas.SetActive(false);
         eventAnnouncement.SetActive(false);
 
@@ -47,39 +51,46 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDied()
     {
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlayDeath();
+
         loseScreen.SetActive(true);
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    // ==================== NIEUWE FUNCTIES VOOR WIN ====================
-
     public void ShowWinScreen()
     {
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlayWin();
+
         WinScreen.SetActive(true);
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    public void RespawnToMainMenu()     // Dit wordt aangeroepen door de Respawn knop
+    // ==================== RESPAWN VANUIT WIN SCREEN ====================
+    public void RespawnToMainMenu()
     {
-        WinScreen.SetActive(false);     // WinScreen uit
-        mainMenu.SetActive(true);       // MainMenu weer aan
+        WinScreen.SetActive(false);     // WinScreen weg
+        mainMenu.SetActive(true);       // MainMenu open
 
         Time.timeScale = 1f;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
 
-    // ==================== BESTAANDE FUNCTIES ====================
+        // Muis weer locken zoals in het spel (zoals jij wilt)
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     public void RespawnPlayer()
     {
         loseScreen.SetActive(false);
         checkpoint.Respawn();
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void QuitGame()

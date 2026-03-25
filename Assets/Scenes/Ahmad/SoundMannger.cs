@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
 
     [Header("Gameplay Sounds")]
     public AudioClip deathSound;
+    public AudioClip winSound;        // ← NIEUW
 
     void Awake()
     {
@@ -40,5 +41,12 @@ public class SoundManager : MonoBehaviour
     {
         if (deathSound != null)
             sfxSource.PlayOneShot(deathSound, volume * AudioListener.volume);
+    }
+
+    // ==================== NIEUWE FUNCTIE ====================
+    public void PlayWin(float volume = 1f)
+    {
+        if (winSound != null)
+            sfxSource.PlayOneShot(winSound, volume * AudioListener.volume);
     }
 }

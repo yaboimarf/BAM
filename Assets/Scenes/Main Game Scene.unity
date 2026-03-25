@@ -3707,7 +3707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &244337507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27661,12 +27661,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2064052147}
-  followSpeed: 0.04
-  distanceBehindPlayer: 0.5
-  fixedHeight: 175
+  followSpeed: 0.06
+  distanceBehindPlayer: 0.1
+  fixedHeight: 150
   rocketPrefab: {fileID: 6613175000067549630, guid: d1b082a4cda1b7b428b9bc0230f11f30, type: 3}
   shootPoint: {fileID: 857309771}
-  fireRate: 20
+  fireRate: 25
 --- !u!1001 &1635082473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29632,6 +29632,7 @@ MonoBehaviour:
   hoverSound: {fileID: 8300000, guid: c68d9e55912c77e4194ff202f6ef98d8, type: 3}
   clickSound: {fileID: 8300000, guid: 07671fe7d1d665b40af56b0a5ac5d65a, type: 3}
   deathSound: {fileID: 0}
+  winSound: {fileID: 0}
 --- !u!114 &1733300775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37895,6 +37896,7 @@ MonoBehaviour:
   hoverSound: {fileID: 8300000, guid: 07671fe7d1d665b40af56b0a5ac5d65a, type: 3}
   clickSound: {fileID: 8300000, guid: c68d9e55912c77e4194ff202f6ef98d8, type: 3}
   deathSound: {fileID: 8300000, guid: b6c7af47362c7e348b483b6c9677301a, type: 3}
+  winSound: {fileID: 8300000, guid: bb06ea548ca04814d95f6ae34ee76b9d, type: 3}
 --- !u!224 &232491346102364288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39308,7 +39310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &9220619420843615256
 MonoBehaviour:
   m_ObjectHideFlags: 0
