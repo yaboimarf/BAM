@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public Rigidbody playerRb;
     PlayerCheckpoint checkpoint;
 
+    private float eventTimer = 0f;   // TIMER VOOR EVENTS
+
     void Awake()
     {
         instance = this;
@@ -25,7 +27,6 @@ public class GameManager : MonoBehaviour
     {
         checkpoint = player.GetComponent<PlayerCheckpoint>();
 
-        // Begin toestand
         mainMenu.SetActive(true);
         loseScreen.SetActive(false);
         WinScreen.SetActive(false);
@@ -38,21 +39,43 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
     }
 
+    void Update()
+    {
+        // EVENT TIMER
+        eventTimer += Time.deltaTime;
+
+        if (eventTimer >= 10f)
+        {
+            TriggerEvent();
+            eventTimer = 0f;
+        }
+    }
+
     public void StartGame()
     {
         mainMenu.SetActive(false);
         timerCanvas.SetActive(true);
-        eventAnnouncement.SetActive(true);
+
         playerRb.constraints = RigidbodyConstraints.FreezeRotation;
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
+    // ⭐ EVENT FUNCTIE
+    public void TriggerEvent()
+    {
+        eventAnnouncement.SetActive(true);
+
+        // SPEEL EVENT SOUND ELKE KEER
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlayEvent(0.5f);
+    }
+
     public void PlayerDied()
     {
         if (SoundManager.instance != null)
-            SoundManager.instance.PlayDeath();
+            SoundManager.instance.PlayDeath(0.5f);
 
         loseScreen.SetActive(true);
         Time.timeScale = 0f;
@@ -63,7 +86,7 @@ public class GameManager : MonoBehaviour
     public void ShowWinScreen()
     {
         if (SoundManager.instance != null)
-            SoundManager.instance.PlayWin();
+            SoundManager.instance.PlayWin(0.5f);
 
         WinScreen.SetActive(true);
         Time.timeScale = 0f;
@@ -71,15 +94,12 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
     }
 
-    // ==================== RESPAWN VANUIT WIN SCREEN ====================
     public void RespawnToMainMenu()
     {
-        WinScreen.SetActive(false);     // WinScreen weg
-        mainMenu.SetActive(true);       // MainMenu open
+        WinScreen.SetActive(false);
+        mainMenu.SetActive(true);
 
         Time.timeScale = 1f;
-
-        // Muis weer locken zoals in het spel (zoals jij wilt)
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
