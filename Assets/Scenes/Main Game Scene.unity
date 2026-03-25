@@ -1066,7 +1066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759137373588178459, guid: 787f17d23a9243d4e8a019e14477b723, type: 3}
       propertyPath: m_Name
-      value: EventManager
+      value: .
       objectReference: {fileID: 0}
     - target: {fileID: 2759137373588178459, guid: 787f17d23a9243d4e8a019e14477b723, type: 3}
       propertyPath: m_IsActive
