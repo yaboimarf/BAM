@@ -1,49 +1,67 @@
 ﻿using UnityEngine;
 
-public class RocketHoming : MonoBehaviour
+public class DroneAI : MonoBehaviour
 {
-    public float speed = 15f;
-    public float rotateSpeed = 5f;
-    public float lifeTime = 6f;
+    public Transform player;
 
-    private Transform target;
+    [Header("Follow")]
+    public float followSpeed = 5f;
+    public float distanceBehindPlayer = 6f;
+    public float fixedHeight = 5f;
 
-    public void SetTarget(Transform newTarget)
-    {
-        target = newTarget;
-    }
+    [Header("Shoot")]
+    public GameObject rocketPrefab;
+    public Transform shootPoint;
+    public float fireRate = 5f;
+    public float shootDistance = 15f; // alleen schieten als drone dichtbij is
 
-    void Start()
-    {
-        Destroy(gameObject, lifeTime);
-    }
+    private float shootTimer;
 
     void Update()
     {
-        if (target == null) return;
+        if (player == null) return;
 
-        Vector3 direction = target.position - transform.position;
-
-        if (direction != Vector3.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-
-            transform.rotation = Quaternion.RotateTowards(
-                transform.rotation,
-                targetRotation,
-                rotateSpeed * 100f * Time.deltaTime
-            );
-        }
-
-        transform.position += transform.forward * speed * Time.deltaTime;
+        FollowPlayer();
+        ShootRocket();
     }
 
-    void OnTriggerEnter(Collider other)
+    void FollowPlayer()
     {
-        if (other.CompareTag("Player"))
+        Vector3 targetPosition = player.position - player.forward * distanceBehindPlayer;
+        targetPosition.y = fixedHeight;
+
+        transform.position = Vector3.Lerp(
+            transform.position,
+            targetPosition,
+            followSpeed * Time.deltaTime
+        );
+
+        Vector3 lookTarget = player.position;
+        lookTarget.y = transform.position.y;
+
+        transform.LookAt(lookTarget);
+    }
+
+    void ShootRocket()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        if (distanceToPlayer <= shootDistance)
         {
-            Debug.Log("PLAYER DEAD 💀");
-            Destroy(gameObject);
+            shootTimer += Time.deltaTime;
+
+            if (shootTimer >= fireRate)
+            {
+                GameObject rocket = Instantiate(rocketPrefab, shootPoint.position, shootPoint.rotation);
+
+                RocketHoming1 rocketScript = rocket.GetComponent<RocketHoming1>();
+                if (rocketScript != null)
+                {
+                    rocketScript.SetTarget(player);
+                }
+
+                shootTimer = 0f;
+            }
         }
     }
 }

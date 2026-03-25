@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using System;
 using Unity.Mathematics;
 using Unity.Mathematics.Geometry;

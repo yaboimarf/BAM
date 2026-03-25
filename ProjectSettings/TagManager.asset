@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Checkpoint
   - KillZone
+  - Rocket
   layers:
   - Default
   - TransparentFX
