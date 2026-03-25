@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - KillZone
   - Rocket
+  - WinTrigger
   layers:
   - Default
   - TransparentFX
