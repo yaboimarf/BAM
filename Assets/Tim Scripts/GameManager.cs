@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     {
         mainMenu.SetActive(false);
         timerCanvas.SetActive(true);
+        eventAnnouncement.SetActive(true);
 
         playerRb.constraints = RigidbodyConstraints.FreezeRotation;
         Time.timeScale = 1f;
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
     // ⭐ EVENT FUNCTIE
     public void TriggerEvent()
     {
-        eventAnnouncement.SetActive(true);
+       
 
         // SPEEL EVENT SOUND ELKE KEER
         if (SoundManager.instance != null)
