@@ -14357,6 +14357,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 732633312}
     m_Modifications:
+    - target: {fileID: 3405417776587314904, guid: 1b7ba7570f46b97428b09cb954473509, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2064052147}
+    - target: {fileID: 3405417776587314904, guid: 1b7ba7570f46b97428b09cb954473509, type: 3}
+      propertyPath: eventWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3405417776587314904, guid: 1b7ba7570f46b97428b09cb954473509, type: 3}
+      propertyPath: platformsToDisable
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4577428251238937559, guid: 1b7ba7570f46b97428b09cb954473509, type: 3}
       propertyPath: m_Name
       value: PlatformDisappearEvent
@@ -22134,7 +22146,7 @@ PrefabInstance:
       objectReference: {fileID: 9220619420843615255}
     - target: {fileID: 4368559948814319179, guid: c9814cf0312b7cb459c6dce794f6cc98, type: 3}
       propertyPath: eventWeight
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4368559948814319179, guid: c9814cf0312b7cb459c6dce794f6cc98, type: 3}
       propertyPath: spawnHeight
@@ -22142,7 +22154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368559948814319179, guid: c9814cf0312b7cb459c6dce794f6cc98, type: 3}
       propertyPath: spawnSpread
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4368559948814319179, guid: c9814cf0312b7cb459c6dce794f6cc98, type: 3}
       propertyPath: totalBombsToSpawn
@@ -35419,7 +35431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7532237402759113264, guid: 1f0d4f0a360df56449d90b6db0599561, type: 3}
       propertyPath: eventWeight
-      value: 1000000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7532237402759113264, guid: 1f0d4f0a360df56449d90b6db0599561, type: 3}
       propertyPath: moveDistance

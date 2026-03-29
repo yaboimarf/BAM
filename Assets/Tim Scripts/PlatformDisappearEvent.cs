@@ -7,6 +7,9 @@ public class PlatformDisappearEvent : GameEvent
     [Header("Platform Settings")]
     public string platformTag = "Platform";
 
+    [Header("Player")]
+    public Transform player;
+
     [Header("Aantal platforms")]
     public int platformsToDisable = 3;
 
@@ -29,7 +32,16 @@ public class PlatformDisappearEvent : GameEvent
         if (platforms.Length == 0)
             yield break;
 
+        
+        GameObject playerPlatform = GetPlayerPlatform();
+
         List<GameObject> platformList = new List<GameObject>(platforms);
+
+        
+        if (playerPlatform != null && platformList.Contains(playerPlatform))
+        {
+            platformList.Remove(playerPlatform);
+        }
 
         int amount = Mathf.Min(platformsToDisable, platformList.Count);
 
@@ -57,6 +69,21 @@ public class PlatformDisappearEvent : GameEvent
         {
             StartCoroutine(GrowPlatform(platform));
         }
+    }
+
+    GameObject GetPlayerPlatform()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(player.position, Vector3.down, out hit, 5f))
+        {
+            if (hit.collider.CompareTag(platformTag))
+            {
+                return hit.collider.gameObject;
+            }
+        }
+
+        return null;
     }
 
     IEnumerator ShrinkPlatform(GameObject platform)
