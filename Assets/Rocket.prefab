@@ -13,8 +13,24 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 75.3785
+      objectReference: {fileID: 0}
+    - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
       propertyPath: moveWithTransform
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.91913235
+      objectReference: {fileID: 0}
+    - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
+      propertyPath: ColorBySpeedModule.range.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0.41656876
       objectReference: {fileID: 0}
     - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
       propertyPath: InitialModule.maxNumParticles
@@ -26,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 7.596447
+      value: -0.60214
       objectReference: {fileID: 0}
     - target: {fileID: 583657140113379413, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -78,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4043153776092291449, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.26084
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 4043153776092291449, guid: 3aec252fa6c662d42a6e4f425e7e2384, type: 3}
       propertyPath: m_LocalRotation.w
@@ -211,7 +227,7 @@ PrefabInstance:
       addedObject: {fileID: 9173337626730734711}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28b575da1b5f8034b8ca1ba5443ec361, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3489075555516639819}
+      addedObject: {fileID: 3073953687698937208}
   m_SourcePrefab: {fileID: 100100000, guid: 28b575da1b5f8034b8ca1ba5443ec361, type: 3}
 --- !u!4 &5804408964669338372 stripped
 Transform:
@@ -382,7 +398,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3489075555516639819
+--- !u!114 &3073953687698937208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394,5 +410,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e133267ac22c8a4f8e31585532ac637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
+  speed: 50
   rotationAxis: {x: 1, y: 0, z: 0}

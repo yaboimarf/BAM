@@ -4,7 +4,12 @@ using UnityEngine.UI;
 public class BrightnessManager : MonoBehaviour
 {
     public Slider brightnessSlider;
-    public Image brightnessOverlay;
+
+    public Image menuOverlay;   // menu panel
+    public Image gameOverlay;   // main game panel
+
+    public float menuMaxAlpha = 200f / 255f;
+    public float gameMaxAlpha = 200f / 255f;
 
     void Start()
     {
@@ -18,12 +23,23 @@ public class BrightnessManager : MonoBehaviour
 
     void UpdateBrightness(float value)
     {
-        float maxAlpha = 230f / 255f;   // jouw grens
-        float alpha = value * maxAlpha;
+        // MENU
+        if (menuOverlay != null)
+        {
+            float menuAlpha = value * menuMaxAlpha;
+            Color c = menuOverlay.color;
+            c.a = menuAlpha;
+            menuOverlay.color = c;
+        }
 
-        Color c = brightnessOverlay.color;
-        c.a = alpha;
-        brightnessOverlay.color = c;
+        // GAME
+        if (gameOverlay != null)
+        {
+            float gameAlpha = value * gameMaxAlpha;
+            Color c2 = gameOverlay.color;
+            c2.a = gameAlpha;
+            gameOverlay.color = c2;
+        }
 
         PlayerPrefs.SetFloat("brightness", value);
     }
