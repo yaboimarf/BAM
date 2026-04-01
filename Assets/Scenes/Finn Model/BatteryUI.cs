@@ -1,18 +1,16 @@
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using UnityEngine.EventSystems;
 public class BatteryUI : MonoBehaviour
 {
-    public GameObject canvas;
+    public UnityEngine.UI.Slider battery;
     public PlayerMovement2 playerMovement;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        battery = 
-    }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        battery.value = playerMovement.batteryRemaining;
     }
 }
