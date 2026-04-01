@@ -1590,6 +1590,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 720843519057018572, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+      propertyPath: jumpCost
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 720843519057018572, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
+      propertyPath: batteryMin
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 720843519057018572, guid: 5e2799dd8884cfe48a0829a2e85d79c7, type: 3}
       propertyPath: boostSpeed
       value: 100
       objectReference: {fileID: 0}
@@ -17518,7 +17526,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627925841}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17573,7 +17581,7 @@ Transform:
   m_GameObject: {fileID: 627925841}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00042582297, y: 0.70710665, z: 0.70710665, w: -0.00042582297}
-  m_LocalPosition: {x: 595, y: 286, z: 441}
+  m_LocalPosition: {x: 595, y: 107, z: 441}
   m_LocalScale: {x: 1849.3751, y: 2204.5615, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
