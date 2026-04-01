@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("Canvassen")]
+    public GameObject controlsKeysCanvas;
     public GameObject mainMenu;
     public GameObject loseScreen;
     public GameObject WinScreen;
@@ -26,8 +27,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         checkpoint = player.GetComponent<PlayerCheckpoint>();
-
-        mainMenu.SetActive(true);
+        controlsKeysCanvas.SetActive(true);
+        mainMenu.SetActive(false);
         loseScreen.SetActive(false);
         WinScreen.SetActive(false);
         timerCanvas.SetActive(false);
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        controlsKeysCanvas.SetActive(false);
         mainMenu.SetActive(false);
         timerCanvas.SetActive(true);
         eventAnnouncement.SetActive(true);
@@ -94,7 +96,15 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+    public void StartMainMenu()
+    {
+        controlsKeysCanvas.SetActive(false);
+        mainMenu.SetActive(true);
 
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void RespawnToMainMenu()
     {
         WinScreen.SetActive(false);

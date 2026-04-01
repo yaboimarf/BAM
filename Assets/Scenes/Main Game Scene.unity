@@ -26417,6 +26417,10 @@ PrefabInstance:
       propertyPath: eventAnnouncement
       value: 
       objectReference: {fileID: 1323030411}
+    - target: {fileID: 626913761838681975, guid: 9007a03f68766604288af7014873e829, type: 3}
+      propertyPath: controlsKeysCanvas
+      value: 
+      objectReference: {fileID: 234903101}
     - target: {fileID: 3374157842150852130, guid: 9007a03f68766604288af7014873e829, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.748295
@@ -34378,7 +34382,7 @@ RectTransform:
   m_Father: {fileID: 747708177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -42705,15 +42709,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8bb49743965071348a5853090885f549, type: 2}
-  m_sharedMaterial: {fileID: 225537380078936115, guid: 8bb49743965071348a5853090885f549, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3e78baf5e1855994daf9273d53d4907f, type: 2}
+  m_sharedMaterial: {fileID: -769884065886802362, guid: 3e78baf5e1855994daf9273d53d4907f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -42736,7 +42740,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -44296,8 +44300,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 230544457}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 11.722412, y: 0.7114868}
   m_SizeDelta: {x: 43.4447, y: -13.7555}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -44950,7 +44954,7 @@ Terrain:
   m_GameObject: {fileID: 1669198888}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: e1d397acd1956854887dc6d7c1937536, type: 2}
+  m_TerrainData: {fileID: 0}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -48995,7 +48999,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 551181457}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: StartMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -49638,8 +49642,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1272282395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 11.722412, y: 0.71150017}
   m_SizeDelta: {x: 43.4447, y: -13.7555}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -54799,7 +54803,7 @@ RectTransform:
   m_Father: {fileID: 1288705791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -55375,7 +55379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2062945191
 RectTransform:
   m_ObjectHideFlags: 0
