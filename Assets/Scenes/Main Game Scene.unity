@@ -1908,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455628623287395839, guid: 787f17d23a9243d4e8a019e14477b723, type: 3}
       propertyPath: errorChancePerSecond
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2455628623287395839, guid: 787f17d23a9243d4e8a019e14477b723, type: 3}
       propertyPath: 'events.Array.data[0]'
