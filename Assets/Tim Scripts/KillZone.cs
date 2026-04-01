@@ -9,8 +9,5 @@ public class KillZone : MonoBehaviour
         {
             GameManager.instance.PlayerDied();
         }
-
-        // Rocket verwijderen (altijd bij hit)
-        Destroy(gameObject);
     }
 }
