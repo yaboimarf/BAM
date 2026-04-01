@@ -461,6 +461,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 927111135}
     m_Modifications:
+    - target: {fileID: 7082304778664387364, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6325c1f6c4dbed1429bb560b71338291, type: 2}
     - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.829528
@@ -10497,6 +10501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ced8269758c2bb74dbdd1df419ac41ad, type: 2}
     - target: {fileID: 919132149155446097, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
       propertyPath: m_Name
       value: scifi-lowpoly-building1 (47)
@@ -12114,6 +12122,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 927111135}
     m_Modifications:
+    - target: {fileID: 7082304778664387364, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ced8269758c2bb74dbdd1df419ac41ad, type: 2}
     - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.829528
@@ -18443,6 +18455,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6325c1f6c4dbed1429bb560b71338291, type: 2}
     - target: {fileID: 919132149155446097, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
       propertyPath: m_Name
       value: scifi-lowpoly-building1 (21)
@@ -20025,6 +20041,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 927111135}
     m_Modifications:
+    - target: {fileID: 7082304778664387364, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6325c1f6c4dbed1429bb560b71338291, type: 2}
     - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.829528
@@ -21213,6 +21233,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ced8269758c2bb74dbdd1df419ac41ad, type: 2}
     - target: {fileID: 919132149155446097, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
       propertyPath: m_Name
       value: scifi-lowpoly-building1 (46)
@@ -24153,6 +24177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 927111135}
     m_Modifications:
+    - target: {fileID: 7082304778664387364, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6325c1f6c4dbed1429bb560b71338291, type: 2}
     - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.829528
@@ -32304,6 +32332,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 927111135}
     m_Modifications:
+    - target: {fileID: 7082304778664387364, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6325c1f6c4dbed1429bb560b71338291, type: 2}
     - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -267.38525
@@ -33059,14 +33091,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 927111135}
     m_Modifications:
     - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 9.829528
-      objectReference: {fileID: 0}
-    - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 9.829528
-      objectReference: {fileID: 0}
-    - target: {fileID: 8215210517443663947, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.8
       objectReference: {fileID: 0}
@@ -33113,10 +33137,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8739686822075433713, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1975061497}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
 --- !u!4 &1320920843 stripped
 Transform:
@@ -40807,6 +40828,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ced8269758c2bb74dbdd1df419ac41ad, type: 2}
     - target: {fileID: 919132149155446097, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
       propertyPath: m_Name
       value: scifi-lowpoly-building1 (48)
@@ -49935,33 +49960,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1715482922}
   m_SourcePrefab: {fileID: 100100000, guid: 52f82aa912ebdbe45aa7a56304b35e1e, type: 3}
---- !u!1 &1975061494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8739686822075433713, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
-  m_PrefabInstance: {fileID: 1320920842}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1975061497
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975061494}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7203354738656201506, guid: 445a5935762c190479277998c78972f1, type: 3}
 --- !u!1 &1977566806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8739686822075433713, guid: a57f1fe8b3a2faa4eb7989cdba4fad0d, type: 3}
