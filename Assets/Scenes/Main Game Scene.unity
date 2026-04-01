@@ -7383,7 +7383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10226,7 +10226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brightnessSlider: {fileID: 1139723853}
-  brightnessOverlay: {fileID: 1471383698}
+  menuOverlay: {fileID: 0}
+  gameOverlay: {fileID: 0}
+  menuMaxAlpha: 0.78431374
+  gameMaxAlpha: 0.78431374
 --- !u!4 &369002900
 Transform:
   m_ObjectHideFlags: 0
