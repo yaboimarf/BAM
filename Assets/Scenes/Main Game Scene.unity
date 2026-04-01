@@ -49773,6 +49773,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ced8269758c2bb74dbdd1df419ac41ad, type: 2}
     - target: {fileID: 919132149155446097, guid: a6081c8304d03384c81ea0afc00f162f, type: 3}
       propertyPath: m_Name
       value: scifi-lowpoly-building1 (49)
